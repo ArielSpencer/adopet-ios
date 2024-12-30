@@ -153,14 +153,18 @@ class PetDetailsViewController: UIViewController {
     }
     
     @objc func didTapSendWhatsappMessageButton() {
-        if let whatsapp = URL(string: "whatsapp://send?phone=\(pet.phoneNumber)&text=Olá! Tenho interesse no pet \(pet.name)") {
-            if UIApplication.shared.canOpenURL(whatsapp) {
-                UIApplication.shared.open(whatsapp, options: [:], completionHandler: nil)
-            } else {
-                if let appstore = URL(string: "https://apps.apple.com/app/whatsapp-messenger/id310633997") {
-                    UIApplication.shared.open(appstore, options: [:], completionHandler: nil)
-                }
-            }
+        
+        guard let whatsappURL = URL(string: "whatsapp://send?phone=\(pet.phoneNumber)&text=Olá! Tenho interesse no pet \(pet.name)") else { return }
+        
+        if UIApplication.shared.canOpenURL(whatsappURL) {
+            UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
+        } else {
+            openWhatsappInAppStore()
         }
+    }
+    
+    private func openWhatsappInAppStore() {
+        guard let appStoreURL = URL(string: "https://apps.apple.com/app/whatsapp-messenger/id310633997") else { return }
+        UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
     }
 }
