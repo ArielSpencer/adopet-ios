@@ -95,18 +95,22 @@ class PetDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        addSubviews()
+        setupConstraints()
+        setPetImageView()
+    }
+    
+    private func setupView() {
         view.backgroundColor = .white
-        
+    }
+    
+    private func addSubviews() {
         view.addSubview(decorativeShapeImageView)
         view.addSubview(stackView)
-        
-        dataManager.downloadPetImage(from: pet.imageUrl) { image in
-            DispatchQueue.main.async {
-                guard let image else { return }
-                self.petImageView.image = image
-            }
-        }
-        
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             
             decorativeShapeImageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -122,6 +126,15 @@ class PetDetailsViewController: UIViewController {
             whatsappMessageButton.heightAnchor.constraint(equalToConstant: 48),
             
         ])
+    }
+    
+    private func setPetImageView() {
+        dataManager.downloadPetImage(from: pet.imageUrl) { image in
+            DispatchQueue.main.async {
+                guard let image else { return }
+                self.petImageView.image = image
+            }
+        }
     }
     
     init(pet: Pet) {
