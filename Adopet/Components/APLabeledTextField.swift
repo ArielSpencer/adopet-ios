@@ -52,6 +52,7 @@ class APLabeledTextField: UIView {
     private func setupView() {
         updateUI()
         addSubviews()
+        setupConstraints()
     }
     
     private func updateUI() {
