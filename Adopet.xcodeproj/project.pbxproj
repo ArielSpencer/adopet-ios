@@ -50,6 +50,7 @@
 		A29C14422D2779E7003B1A3F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14412D2779E7003B1A3F /* AuthenticationManager.swift */; };
 		A29C14442D277A46003B1A3F /* PetsDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14432D277A46003B1A3F /* PetsDataServices.swift */; };
 		A29C14462D277ACB003B1A3F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14452D277ACB003B1A3F /* ImageDownloader.swift */; };
+		A29C14482D277F49003B1A3F /* ExternalLinksHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		A29C14412D2779E7003B1A3F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		A29C14432D277A46003B1A3F /* PetsDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsDataServices.swift; sourceTree = "<group>"; };
 		A29C14452D277ACB003B1A3F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinksHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				A29C14412D2779E7003B1A3F /* AuthenticationManager.swift */,
 				A29C14432D277A46003B1A3F /* PetsDataServices.swift */,
 				A29C14452D277ACB003B1A3F /* ImageDownloader.swift */,
+				A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29C14482D277F49003B1A3F /* ExternalLinksHandler.swift in Sources */,
 				A26255802D23673F0009E077 /* APLabeledTextField.swift in Sources */,
 				48941E422B85275600C2CF86 /* TableHeaderView.swift in Sources */,
 				48C9B3682B7C204500F16F61 /* Pet.swift in Sources */,
