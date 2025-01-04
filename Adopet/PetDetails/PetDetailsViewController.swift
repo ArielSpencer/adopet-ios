@@ -130,9 +130,10 @@ class PetDetailsViewController: UIViewController {
     }
     
     private func setPetImageView() {
-        imageDownloader.downloadImage(from: pet.imageUrl) { image in
+        imageDownloader.downloadImage(from: pet.imageUrl) {
+            data in
             DispatchQueue.main.async {
-                guard let image else { return }
+                guard let data = data, let image = UIImage(data: data) else { return }
                 self.petImageView.image = image
             }
         }

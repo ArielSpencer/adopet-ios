@@ -28,9 +28,11 @@ class PetTableViewCell: UITableViewCell {
     }
     
     func set(pet: Pet) {
-        imageDownloader.downloadImage(from: pet.imageUrl) { image in
+        imageDownloader.downloadImage(from: pet.imageUrl) {
+            data in
             DispatchQueue.main.async {
-                if let image {
+                if let data = data,
+                   let image = UIImage(data: data) {
                     self.dogImg.image = image
                 }
             }

@@ -5,10 +5,10 @@
 //  Created by Ariel Spencer on 02/01/25.
 //
 
-import UIKit
+import Foundation
 
 class ImageDownloader {
-    func downloadImage(from url: String, completion: @escaping (UIImage?) -> Void) {
+    func downloadImage(from url: String, completion: @escaping (Data?) -> Void) {
         guard let url = URL(string: url) else {
             completion(nil)
             return
@@ -16,7 +16,7 @@ class ImageDownloader {
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             if let data = data {
-                completion(UIImage(data: data))
+                completion(data)
             }
         }.resume()
     }
