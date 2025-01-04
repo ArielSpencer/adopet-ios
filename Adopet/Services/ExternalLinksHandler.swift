@@ -8,16 +8,20 @@
 import UIKit
 
 class ExternalLinksHandler {
+    
+    private var urlHandler = URLHandler()
+    
     func openTelephoneUrl(phoneNumber: String) {
-            guard let phoneURL = URL(string: "tel://\(phoneNumber)") else { return }
-            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+        if let telephoneURL = URL(string: "tel://\(phoneNumber)") {
+            urlHandler.openURL(telephoneURL)
         }
+    }
     
     func openWhatsappUrl(phoneNumber: String, message: String) {
         guard let whatsappURL = URL(string: "whatsapp://send?phone=\(phoneNumber)&text=\(message)") else { return }
         
-        if UIApplication.shared.canOpenURL(whatsappURL) {
-            UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
+        if urlHandler.canOpenURL(whatsappURL) {
+            urlHandler.openURL(whatsappURL)
         } else {
             openWhatsappInAppStore()
         }
@@ -25,6 +29,6 @@ class ExternalLinksHandler {
     
     func openWhatsappInAppStore() {
         guard let appStoreURL = URL(string: "https://apps.apple.com/app/whatsapp-messenger/id310633997") else { return }
-        UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
+        urlHandler.openURL(appStoreURL)
     }
 }

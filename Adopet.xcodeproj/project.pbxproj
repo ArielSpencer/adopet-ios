@@ -51,6 +51,7 @@
 		A29C14442D277A46003B1A3F /* PetsDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14432D277A46003B1A3F /* PetsDataServices.swift */; };
 		A29C14462D277ACB003B1A3F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14452D277ACB003B1A3F /* ImageDownloader.swift */; };
 		A29C14482D277F49003B1A3F /* ExternalLinksHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */; };
+		A29CB3C32D28D0BF003A7B2C /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CB3C22D28D0BF003A7B2C /* URLHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		A29C14432D277A46003B1A3F /* PetsDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsDataServices.swift; sourceTree = "<group>"; };
 		A29C14452D277ACB003B1A3F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinksHandler.swift; sourceTree = "<group>"; };
+		A29CB3C22D28D0BF003A7B2C /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				A29C14432D277A46003B1A3F /* PetsDataServices.swift */,
 				A29C14452D277ACB003B1A3F /* ImageDownloader.swift */,
 				A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */,
+				A29CB3C22D28D0BF003A7B2C /* URLHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				48A900D42B79786F0057616A /* HomeViewController.swift in Sources */,
 				A29C143E2D261C12003B1A3F /* Constants.swift in Sources */,
 				A29C14402D2778F3003B1A3F /* UserManager.swift in Sources */,
+				A29CB3C32D28D0BF003A7B2C /* URLHandler.swift in Sources */,
 				A29C14442D277A46003B1A3F /* PetsDataServices.swift in Sources */,
 				A29C14462D277ACB003B1A3F /* ImageDownloader.swift in Sources */,
 				48EDD0E92B7D6E9A00CB6228 /* UITextField+.swift in Sources */,
