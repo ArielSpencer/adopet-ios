@@ -9,6 +9,8 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
+    private var authenticationManager: AuthenticationProvider = GoogleAuthenticationProvider()
+    
     private lazy var paws: UIImageView = {
         let imgView = UIImageView(image: UIImage(named: "paws"))
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -163,6 +165,16 @@ class SignInViewController: UIViewController {
     @objc func signIn() {
         let email = emailTxtField.text!
         let password = passwordTxtField.text!
+        
+        authenticationManager.signIn(email: email, password: password) { result in
+            switch result {
+            case .success(let success):
+                self.navigationController?.pushViewController(PetsListViewController(), animated: true)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         
         navigationController?.pushViewController(PetsListViewController(), animated: true)
     }
