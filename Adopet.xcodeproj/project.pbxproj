@@ -45,6 +45,7 @@
 		48EDD0E92B7D6E9A00CB6228 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EDD0E82B7D6E9A00CB6228 /* UITextField+.swift */; };
 		A262557D2D2361AE0009E077 /* CreateUserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262557C2D2361AE0009E077 /* CreateUserAccountModel.swift */; };
 		A26255802D23673F0009E077 /* APLabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262557F2D23673F0009E077 /* APLabeledTextField.swift */; };
+		A28BFC412D2A298900E275F8 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28BFC402D2A298900E275F8 /* NetworkingService.swift */; };
 		A29C143E2D261C12003B1A3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C143D2D261C12003B1A3F /* Constants.swift */; };
 		A29C14402D2778F3003B1A3F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C143F2D2778F3003B1A3F /* UserManager.swift */; };
 		A29C14422D2779E7003B1A3F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C14412D2779E7003B1A3F /* AuthenticationManager.swift */; };
@@ -114,6 +115,7 @@
 		48EDD0E82B7D6E9A00CB6228 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		A262557C2D2361AE0009E077 /* CreateUserAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserAccountModel.swift; sourceTree = "<group>"; };
 		A262557F2D23673F0009E077 /* APLabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APLabeledTextField.swift; sourceTree = "<group>"; };
+		A28BFC402D2A298900E275F8 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		A29C143D2D261C12003B1A3F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A29C143F2D2778F3003B1A3F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A29C14412D2779E7003B1A3F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				A29C14452D277ACB003B1A3F /* ImageDownloader.swift */,
 				A29C14472D277F49003B1A3F /* ExternalLinksHandler.swift */,
 				A29CB3C22D28D0BF003A7B2C /* URLHandler.swift */,
+				A28BFC402D2A298900E275F8 /* NetworkingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				A29C14442D277A46003B1A3F /* PetsDataServices.swift in Sources */,
 				A29C14462D277ACB003B1A3F /* ImageDownloader.swift in Sources */,
 				48EDD0E92B7D6E9A00CB6228 /* UITextField+.swift in Sources */,
+				A28BFC412D2A298900E275F8 /* NetworkingService.swift in Sources */,
 				48C9B3732B7D097C00F16F61 /* PetTableViewCell.swift in Sources */,
 				A262557D2D2361AE0009E077 /* CreateUserAccountModel.swift in Sources */,
 				A29C14422D2779E7003B1A3F /* AuthenticationManager.swift in Sources */,
