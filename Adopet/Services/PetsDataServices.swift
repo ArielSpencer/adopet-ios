@@ -16,7 +16,11 @@ class PetsDataServices {
     
     weak var delegate: PetsDataServicesDelegate?
     
-    private var networkingService: NetworkingProtocol = URLSessionNetworking()
+    private var networkingService: NetworkingProtocol
+    
+    init(networkservice: NetworkingProtocol) {
+        self.networkingService = networkservice
+    }
     
     func fatchPets() {
         

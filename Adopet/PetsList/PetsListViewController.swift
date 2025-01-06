@@ -10,7 +10,7 @@ import UIKit
 class PetsListViewController: UIViewController {
     
     var data: [Pet] = []
-    private var dataService = PetsDataServices()
+    private var dataService = PetsDataServices(networkservice: URLSessionNetworking())
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
