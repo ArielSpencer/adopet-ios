@@ -60,7 +60,7 @@ class PetsListViewController: UIViewController {
     }
     
     private func fetchAllPets() {
-        dataService.fatchPets(url: URL(string: "https://my-json-server.typicode.com/giovannamoeller/pets-api/pets")!) { result in
+        dataService.fatchPets() { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let result):
