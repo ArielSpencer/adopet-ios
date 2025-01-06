@@ -25,6 +25,7 @@ class PetsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataService.delegate = self
         setupView()
         addSubviews()
         setupTableHeaderView()
@@ -60,23 +61,24 @@ class PetsListViewController: UIViewController {
     }
     
     private func fetchAllPets() {
-        dataService.fatchPets() { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let result):
-                    self.data = result
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    print(error)
-                }
-            }
-        }
+        dataService.fatchPets()
     }
     
     override func viewSafeAreaInsetsDidChange() {
         setupConstraints()
     }
     
+}
+
+extension PetsListViewController: PetsDataServicesDelegate {
+    func didFetchPetsSuccessfully(_ pets: [Pet]) {
+        self.data = pets
+        tableView.reloadData()
+    }
+    
+    func didFailWithError(_ error: NetworkingError) {
+        print(error)
+    }
 }
 
 // MARK: - Table View dataSorce e Delegate
